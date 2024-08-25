@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><a href="index.html">ValeriStore</a></div>
+        <ul>
+            <li><a href="index.html">Home Page |</a></li>
+            <li><a href="product.html">Products |</a></li>
+            <li><a href="contact.html">Contact |</a></li>
+            <li><a href="login.html" id="login link"><img src="https://cdn3.iconfinder.com/data/icons/essential-rounded/64/Rounded-31-512.png" class="login" id="avatar img"></a></li>
+        </ul>
+    </div>
+    <div class="content5">
+        <form onsubmit="register(event)">
+
+            <div class="div2">
+                <input type="text" placeholder="Name" required id="name">
+                <input type="text" placeholder="Surname" required id="surname">     
+                <input type="email" placeholder="Email" required id="email">
+                <input type="password" placeholder="Password" required id="password">
+                <input type="number" required placeholder="Phone number" id="phone">
+            </div>
+            <select class="selector">
+                <option>select your Country</option>
+                <option>Armenia</option>
+                <option>Russia</option>
+                <option>England</option>
+                <option>Ukraine</option>
+                <option>Germany</option>
+                <option>France</option>
+            </select>
+            <select class="selector" id="avatar">
+                <option value="">select your avatar</option>
+                <option value="https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg">Avatar 1</option>
+                <option value="https://static.vecteezy.com/system/resources/thumbnails/002/002/257/small_2x/beautiful-woman-avatar-character-icon-free-vector.jpg">Avatar 2</option>
+                <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtfF9PL7fKHFb9weSmEzP5A9A8_VkXC7-0VJLv74VC4A&s">Avatar 3</option>
+                <option value="https://preview.redd.it/trying-to-come-up-with-a-new-avatar-for-my-various-social-v0-wby69l6e1lsb1.jpg?width=519&format=pjpg&auto=webp&s=61341c3ce447f8356da3146c1903395fc43d28dc">Avatar 4</option>
+                <option value="https://t3.ftcdn.net/jpg/02/73/71/46/360_F_273714684_GXTZHmfFM3yvZwP7KaGc1h2Md00F83UF.jpg">Avatar 5</option>
+            </select>
+            <input class="button2" type="submit" value="Send">
+        </form>
+    </div>
+    <div class="footer">
+        <div class="media">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://x.com/?lang=en&mx=2" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+        </div>
+        <div class="designer">
+            <p>Designed by Valeri</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function register(event){
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let surname = document.getElementById("surname").value;
+            let email = document.getElementById("email").value;
+            let avatar = document.getElementById("avatar").value;
+
+            alert("Welcome " + name + " " + surname + "! Your email is " + email);
+
+            if (avatar) {
+                document.getElementById("avatar img").src = avatar; 
+            }
+        }
+    </script>
+</body>
+
+</html>
